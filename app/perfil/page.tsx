@@ -69,8 +69,8 @@ export default function ProfilePage() {
 
   const quickLinks = [
     {
-      title: "Simular Consórcio",
-      description: "Faça uma simulação personalizada agora mesmo",
+      title: "Solicitar Consultoria",
+      description: "Fale com nossos especialistas e renove seu lar",
       icon: Calculator,
     },
     {
@@ -79,8 +79,8 @@ export default function ProfilePage() {
       icon: MessageSquareDiff,
     },
     {
-      title: "Área do Cliente",
-      description: "Acesse sua conta BGomes",
+      title: "Localização",
+      description: "Saiba onde nos encontrar",
       icon: UserRound,
     },
   ];
