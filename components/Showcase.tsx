@@ -51,7 +51,7 @@ export default function Showcase() {
             className="relative h-[600px]"
           >
             <Image
-              src="/placeholder.svg?height=600&width=500"
+              src="https://i.ibb.co/kVBLKtTk/AF8-E4-CEB-AD96-48-A8-AE52-18-F67-C476-B27.jpg"
               alt="Showcase"
               fill
               className="object-cover rounded-2xl"

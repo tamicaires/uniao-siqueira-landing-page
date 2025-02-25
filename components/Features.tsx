@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const features = [
   {
@@ -19,22 +19,24 @@ const features = [
     description: "Designs que valorizam a arquitetura local",
     image: "https://i.ibb.co/JxmXLHs/f585ad5b-4a1c-4264-8d02-1de373a06e6f.jpg",
   },
-]
+];
 
 export default function Features() {
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 relative before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-gray-50 before:to-white before:z-0">
-
-                <motion.div
+      <div className="container mx-auto px-4 ">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0648a8] mb-4">Soluções em Acabamentos para Imperatriz</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0648a8] mb-4">
+            Soluções em Acabamentos para Imperatriz
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Produtos selecionados para atender às necessidades específicas dos projetos em Imperatriz e região
+            Produtos selecionados para atender às necessidades específicas dos
+            projetos em Imperatriz e região
           </p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8">
@@ -64,6 +66,5 @@ export default function Features() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

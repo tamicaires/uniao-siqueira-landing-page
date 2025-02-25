@@ -1,40 +1,44 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import { generateWhatsAppLink } from "@/shared/utils/util";
 
 const menuItems = [
   { title: "Início", href: "/" },
-  { title: "Produtos", href: "/#produtos" },
-  { title: "Sobre", href: "/#sobre" },
-  { title: "Projetos", href: "/#projetos" },
+  { title: "Produtos", href: "/#products" },
+  { title: "Catálogo", href: "/catalogo" },
   { title: "Blog", href: "/blog" },
   { title: "Contato", href: "/#contato" },
-]
+];
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const isHomePage = pathname === "/"
+  const isHomePage = pathname === "/";
 
+  const message = `Olá, vim do site, gostaria de sabe mais sobre os produtos`;
+  const linkWithMessage = generateWhatsAppLink(message);
   return (
     <>
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled || !isHomePage ? "bg-[#0648a8]  shadow-lg" : "bg-transparent"
+          isScrolled || !isHomePage
+            ? "bg-[#0648a8]  shadow-lg"
+            : "bg-transparent"
         }`}
       >
         <div className="container mx-auto px-4">
@@ -47,7 +51,11 @@ export default function Navbar() {
                 height={40}
                 className="w-auto h-10"
               />
-              <span className={`text-2xl font-semibold ${isScrolled || !isHomePage ? "text-white" : "text-white"}`}>
+              <span
+                className={`text-2xl font-semibold ${
+                  isScrolled || !isHomePage ? "text-white" : "text-white"
+                }`}
+              >
                 União Siqueira
               </span>
             </Link>
@@ -59,14 +67,17 @@ export default function Navbar() {
                   key={item.title}
                   href={item.href}
                   className={`text-sm font-medium transition-colors duration-300 ${
-                    isScrolled || !isHomePage ? "text-white hover:text-[#ffcf04]" : "text-white hover:text-[#ffcf04]"
+                    isScrolled || !isHomePage
+                      ? "text-white hover:text-[#ffcf04]"
+                      : "text-white hover:text-[#ffcf04]"
                   }`}
                 >
                   {item.title}
                 </Link>
               ))}
               <Link
-                href="https://wa.me/seunumerodowhatsapp"
+                href={linkWithMessage}
+                target="_blank"
                 className="bg-[#ffcf04] text-[#0648a8] px-4 py-2 rounded-full font-medium text-sm hover:shadow-lg transition-shadow duration-300"
               >
                 Fale Conosco
@@ -74,7 +85,10 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button onClick={() => setIsMobileMenuOpen(true)} className="md:hidden text-[#0648a8]">
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="md:hidden text-[#0648a8]"
+            >
               <Menu size={24} />
             </button>
           </div>
@@ -90,7 +104,11 @@ export default function Navbar() {
         >
           <div
             className="fixed right-0 top-0 bottom-0 w-64 bg-white p-6 transition-transform duration-300"
-            style={{ transform: isMobileMenuOpen ? "translateX(0)" : "translateX(100%)" }}
+            style={{
+              transform: isMobileMenuOpen
+                ? "translateX(0)"
+                : "translateX(100%)",
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-end mb-8">
@@ -121,6 +139,5 @@ export default function Navbar() {
         </div>
       )}
     </>
-  )
+  );
 }
-

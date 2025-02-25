@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { CheckCircle, ArrowRight } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import { CheckCircle, ArrowRight } from "lucide-react";
+import { generateWhatsAppLink } from "@/shared/utils/util";
 
 const testimonials = [
   {
@@ -26,11 +27,13 @@ const testimonials = [
     content:
       "Os revestimentos da União são um diferencial em meus projetos. Qualidade e beleza que encantam meus clientes a cada novo trabalho.",
   },
-]
+];
 
 export default function ConversionSection() {
-  const [activeTestimonial, setActiveTestimonial] = useState(0)
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
+  const message = `Olá, vim do site, gostaria de agendar uma consultoria`;
+  const linkWithMessage = generateWhatsAppLink(message);
   return (
     <section className="py-20 bg-[#FFCF04] relative overflow-hidden">
       <div className="container mx-auto px-4">
@@ -40,8 +43,8 @@ export default function ConversionSection() {
               Transforme Sua Casa em um Lar dos Sonhos
             </h2>
             <p className="text-xl text-gray-800 mb-8">
-              Descubra como a União pode ajudar você a criar espaços únicos que refletem sua personalidade e estilo de
-              vida.
+              Descubra como a União pode ajudar você a criar espaços únicos que
+              refletem sua personalidade e estilo de vida.
             </p>
             <ul className="space-y-4 mb-8">
               {[
@@ -58,7 +61,8 @@ export default function ConversionSection() {
             </ul>
             <div>
               <a
-                href="https://wa.me/seunumerodowhatsapp"
+                href={linkWithMessage}
+                target="_blank"
                 className="inline-flex items-center bg-[#0648a8] text-white px-6 py-3 rounded-full font-bold text-lg hover:shadow-lg transition-shadow duration-300"
               >
                 Agende uma Consultoria Grátis
@@ -71,18 +75,27 @@ export default function ConversionSection() {
               <div className="mb-6">
                 <>
                   <div>
-                    <p className="text-gray-600 italic mb-4">"{testimonials[activeTestimonial].content}"</p>
+                    <p className="text-gray-600 italic mb-4">
+                      "{testimonials[activeTestimonial].content}"
+                    </p>
                     <div className="flex items-center">
                       <Image
-                        src={testimonials[activeTestimonial].image || "/placeholder.svg"}
+                        src={
+                          testimonials[activeTestimonial].image ||
+                          "/placeholder.svg"
+                        }
                         alt={testimonials[activeTestimonial].name}
                         width={50}
                         height={50}
                         className="rounded-full mr-4"
                       />
                       <div>
-                        <p className="font-semibold text-[#0648a8]">{testimonials[activeTestimonial].name}</p>
-                        <p className="text-sm text-gray-500">{testimonials[activeTestimonial].role}</p>
+                        <p className="font-semibold text-[#0648a8]">
+                          {testimonials[activeTestimonial].name}
+                        </p>
+                        <p className="text-sm text-gray-500">
+                          {testimonials[activeTestimonial].role}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -93,7 +106,11 @@ export default function ConversionSection() {
                   <button
                     key={index}
                     onClick={() => setActiveTestimonial(index)}
-                    className={`w-3 h-3 rounded-full ${index === activeTestimonial ? "bg-[#0648a8]" : "bg-gray-300"}`}
+                    className={`w-3 h-3 rounded-full ${
+                      index === activeTestimonial
+                        ? "bg-[#0648a8]"
+                        : "bg-gray-300"
+                    }`}
                   />
                 ))}
               </div>
@@ -104,6 +121,5 @@ export default function ConversionSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

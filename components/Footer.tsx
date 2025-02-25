@@ -1,4 +1,9 @@
+import { generateWhatsAppLink } from "@/shared/utils/util";
+import Link from "next/link";
+
 export default function Footer() {
+  const message = `Olá, vim do site, gostaria de sabe mais sobre os produtos`;
+  const linkWithMessage = generateWhatsAppLink(message);
   return (
     <footer className="bg-white py-12 border-t">
       <div className="container mx-auto px-4">
@@ -6,7 +11,8 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold text-[#0648a8] mb-4">União</h3>
             <p className="text-gray-600">
-              Transformando sonhos em realidade através de soluções únicas para seus espaços.
+              Transformando sonhos em realidade através de soluções únicas para
+              seus espaços.
             </p>
           </div>
           <div>
@@ -20,25 +26,28 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-semibold text-[#0648a8] mb-4">Empresa</h4>
-            <ul className="space-y-2 text-gray-600">
-              <li>Sobre Nós</li>
-              <li>Projetos</li>
-              <li>Blog</li>
-              <li>Contato</li>
+            <ul className="space-y-2 flex flex-col text-gray-600">
+              <Link href="#products">Produtos</Link>
+              <Link href="/blog">Blog</Link>
+              <Link href="/catalogo">Catálogo</Link>
+              <Link href={linkWithMessage}>Fale Conosco</Link>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-[#0648a8] mb-4">Contato</h4>
             <ul className="space-y-2 text-gray-600">
-              <li>contato@uniao.com.br</li>
-              <li>(XX) XXXX-XXXX</li>
+              <li>contato@uniaosiqueira.com.br</li>
+              <li>(99) 98134-8896</li>
               <li>Endereço da Loja</li>
-              <li>Cidade - Estado</li>
+              <li>Av. Colina Park, Imperatriz -MA</li>
             </ul>
           </div>
         </div>
         <div className="mt-12 pt-8 border-t text-center text-gray-600">
-          <p>&copy; {new Date().getFullYear()} União. Todos os direitos reservados.</p>
+          <p>
+            &copy; {new Date().getFullYear()} União Siqueira. Todos os direitos
+            reservados.
+          </p>
         </div>
       </div>
       <script
@@ -89,6 +98,5 @@ export default function Footer() {
         }}
       />
     </footer>
-  )
+  );
 }
-

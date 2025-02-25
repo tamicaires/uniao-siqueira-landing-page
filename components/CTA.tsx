@@ -1,9 +1,12 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
+import { generateWhatsAppLink } from "@/shared/utils/util";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function CTA() {
+  const message = `Olá, vim do site, gostaria de agendar uma consultoria`;
+  const linkWithMessage = generateWhatsAppLink(message);
   return (
     <section className="py-20 bg-[#0648a8]">
       <div className="container mx-auto px-4">
@@ -22,14 +25,15 @@ export default function CTA() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl mb-8 text-white/90"
           >
-            Entre em contato agora mesmo e transforme seus espaços em ambientes extraordinários
+            Entre em contato agora mesmo e transforme seus espaços em ambientes
+            extraordinários
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Link href="https://wa.me/seunumerodowhatsapp">
+            <Link href={linkWithMessage}>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -42,6 +46,5 @@ export default function CTA() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
