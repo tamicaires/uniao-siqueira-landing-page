@@ -1,23 +1,26 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import Hero from "@/components/Hero"
-import Features from "@/components/Features"
-import Products from "@/components/Products"
-import Steps from "@/components/Steps"
-import Showcase from "@/components/Showcase"
-import FAQ from "@/components/FAQ"
-import CTA from "@/components/CTA"
-import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
-import ConversionSection from "@/components/ConversionSection"
-import LocalSection from "@/components/LocalSection"
+import type { Metadata } from "next";
+import Link from "next/link";
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import Products from "@/components/Products";
+import Steps from "@/components/Steps";
+import Showcase from "@/components/Showcase";
+import FAQ from "@/components/FAQ";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import ConversionSection from "@/components/ConversionSection";
+import LocalSection from "@/components/LocalSection";
+import MonthOferts from "@/components/MothOferts";
 
 export const metadata: Metadata = {
-  title: "União Siqueira - Pisos, Porcelanatos, Telhas e Revestimentos em Imperatriz, MA",
+  title:
+    "União Siqueira - Pisos, Porcelanatos, Telhas e Revestimentos em Imperatriz, MA",
   description:
     "Encontre os melhores pisos, porcelanatos, telhas e revestimentos em Imperatriz, Maranhão. Qualidade superior e atendimento personalizado para sua obra ou reforma.",
-  keywords: "pisos, porcelanatos, telhas, revestimentos, Imperatriz, Maranhão, construção, reforma, acabamentos",
-}
+  keywords:
+    "pisos, porcelanatos, telhas, revestimentos, Imperatriz, Maranhão, construção, reforma, acabamentos",
+};
 
 export default function Home() {
   return (
@@ -27,6 +30,7 @@ export default function Home() {
       <Features />
       <ConversionSection />
       <Products />
+      <MonthOferts />
       <LocalSection />
       <Steps />
       <Showcase />
@@ -36,7 +40,8 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Confira Nosso Blog</h2>
           <p className="text-xl mb-6">
-            Dicas, tendências e informações sobre pisos, porcelanatos e revestimentos em Imperatriz
+            Dicas, tendências e informações sobre pisos, porcelanatos e
+            revestimentos em Imperatriz
           </p>
           <Link
             href="/blog"
@@ -48,6 +53,5 @@ export default function Home() {
       </section>
       <Footer />
     </main>
-  )
+  );
 }
-

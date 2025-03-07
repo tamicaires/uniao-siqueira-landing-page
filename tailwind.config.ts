@@ -41,6 +41,13 @@ const config: Config = {
   				DEFAULT: 'hsl(var(--destructive))',
   				foreground: 'hsl(var(--destructive-foreground))'
   			},
+				uniao: {
+          primary: "#003B95", // Azul principal
+          secondary: "#FFD700", // Amarelo
+          light: "#E6F0FF", // Azul claro para backgrounds
+          dark: "#002B6E", // Azul mais escuro
+          hover: "#004DBF", // Azul para hover
+        },
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
