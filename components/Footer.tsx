@@ -37,7 +37,7 @@ export default function Footer() {
             <h4 className="font-semibold text-[#0648a8] mb-4">Contato</h4>
             <ul className="space-y-2 text-gray-600">
               <li>contato@uniaosiqueira.com.br</li>
-              <li>(99) 98134-8896</li>
+              <li>(99) 98134-8896 | 99190-5255</li>
               <li>Endereço da Loja</li>
               <li>Av. Colina Park, Imperatriz -MA</li>
             </ul>
