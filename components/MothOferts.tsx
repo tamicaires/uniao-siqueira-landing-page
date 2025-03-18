@@ -97,7 +97,7 @@ export default function MonthOferts() {
             <h2 className="text-3xl md:text-5xl font-extrabold mb-2">
               OFERTAS IMPERDÍVEIS DO MÊS
             </h2>
-            <div className="flex items-center justify-center gap-2 text-uniao-secondary font-bold text-xl">
+            <div className="flex items-center justify-center gap-2 text-uniao-secondary font-bold text-xl sm:text-xs">
               <span>ECONOMIZE MUITO</span>
               <span>•</span>
               <span>PREÇOS IMBATÍVEIS</span>
