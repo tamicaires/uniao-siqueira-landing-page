@@ -315,6 +315,171 @@ const products = [
       "Acabamento polido de alto brilho",
     ],
   },
+  {
+    id: 18,
+    name: "Piso Varandas Grigio",
+    category: "Piso",
+    images: [
+      "https://lumeceramica.com.br/wp-content/uploads/2024/03/VARANDAS-GRIGIO-novo.jpg",
+    ],
+    description:
+      "Piso elegante, com tons de cinza e detalhes que elevam o nivel do seu lar.",
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento acetinado"],
+  },
+  {
+    id: 19,
+    name: "Piso Studio Gris",
+    category: "Piso",
+    images: [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxNhB5Zbuq19s1wDEgbM2P0ZTnCoxBwcNUOw&s",
+      "https://cassol.vtexassets.com/arquivos/ids/4669874-800-auto?v=638739270763630000&width=800&height=auto&aspect=true",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento acetinado"],
+  },
+  {
+    id: 20,
+    name: "Piso Titanium Branco",
+    category: "Piso",
+    images: [
+      "https://lumeceramica.com.br/wp-content/uploads/2021/08/TITANIUM-BRANCO.jpg",
+      "https://images.tcdn.com.br/img/img_prod/1290726/piso_60x60_titanium_branco_retificado_extra_pei5_v2_1_face_cx_2_5m_lume_1313_2_4e97da992153ac6e423cf35e0393cfa4.jpg",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento brilhante"],
+  },
+  {
+    id: 21,
+    name: "Piso Piedra Plus",
+    category: "Piso",
+    images: [
+      "https://lumeceramica.com.br/wp-content/uploads/2021/08/Piedra-60x60-1.jpg",
+      "https://lumeceramica.com.br/wp-content/uploads/2021/08/Piedra.jpg",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento brilhante"],
+  },
+  {
+    id: 22,
+    name: "Piso Marmo Bianco",
+    category: "Piso",
+    images: [
+      "https://lumeceramica.com.br/wp-content/uploads/2022/11/MARMO_BIANCO_FC1.jpg",
+      "https://lumeceramica.com.br/wp-content/uploads/2023/06/Marmo-Bianco-ambiente.jpg",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento brilhante"],
+  },
+  {
+    id: 23,
+    name: "Piso Maldivas Contact",
+    category: "Piso",
+    images: [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqK7V2JfkYPhwITo2wRYLIPcYdPCRBCNutBw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSduyJPMbRRhfZ9zLnRAOAaFjy_aQxPA61TtFa2CAMSx3e8r45UxlwWlZHrVemRLzXoikY&usqp=CAU",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento acetinado"],
+  },
+  {
+    id: 23,
+    name: "Piso Maldivas Contact",
+    category: "Piso",
+    images: [
+      "https://lumeceramica.com.br/wp-content/uploads/2022/11/CRISTALLO-FC1.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGzhotdVRishsOPqw2NN2gBhl6eXqcsPVRcQ&s",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento brilhante"],
+  },
+  {
+    id: 24,
+    name: "Piso Cristalo",
+    category: "Piso",
+    images: [
+      "https://lumeceramica.com.br/wp-content/uploads/2022/11/CRISTALLO-FC1.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGzhotdVRishsOPqw2NN2gBhl6eXqcsPVRcQ&s",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento brilhante"],
+  },
+  {
+    id: 25,
+    name: "Piso Dallas",
+    category: "Piso",
+    images: [
+      "https://lumeceramica.com.br/wp-content/uploads/2021/08/Dallas-60x60-1.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8LGOK8eEkShymM_5mLeeijdiLu2n5iQNPaA&s",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: [
+      "Resistente a manchas",
+      "Fácil limpeza",
+      "Acabamento granilado/liso",
+    ],
+  },
+  {
+    id: 25,
+    name: "Piso Calacata Bianco",
+    category: "Piso",
+    images: [
+      "https://liquidapiso.com.br/wp-content/uploads/2024/03/CALACATA-BIANCO-LUME.jpg",
+      "https://lumeceramica.com.br/wp-content/uploads/2023/10/CALACATA-BIANCO-ambiente-60x60-1.jpg",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento brilhante"],
+  },
+  {
+    id: 26,
+    name: "Piso Arizona Cinza",
+    category: "Piso",
+    images: [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4MnQV7xzRJhnYLby6YQKB21YTt0_ROlpeSg&s",
+      "https://tosel.vtexassets.com/arquivos/ids/407177/31795-2.jpg?v=638649362215800000",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: [
+      "Resistente a manchas",
+      "Fácil limpeza",
+      "Acabamento granilado/relevo",
+    ],
+  },
+  {
+    id: 26,
+    name: "Piso Arizona Bege",
+    category: "Piso",
+    images: [
+      "https://lumeceramica.com.br/wp-content/uploads/2021/08/Arizona-Bege-60x60cm.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMYBZW__VPkLT747-pI6L9sGAy0dXHlRkS-g&s",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento brilhante"],
+  },
+  {
+    id: 27,
+    name: "Piso Ambar",
+    category: "Piso",
+    images: [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcn8Yngg2aWIgA-jqmkcLfcF571E7Mm8gbng&s",
+      "https://acdn-us.mitiendanube.com/stores/001/111/164/products/imagem-1505-75e0e6018122cd0bfa17302019824273-1024-1024.jpg",
+    ],
+    size: "60x60cm",
+    quantityPerM2: 2.5,
+    features: ["Resistente a manchas", "Fácil limpeza", "Acabamento polido"],
+  },
 ];
 
 interface ProductModalProps {
@@ -495,7 +660,7 @@ export default function CatalogoPage() {
                   {product.name}
                 </h2>
                 <p className="text-gray-600 mb-4 line-clamp-2">
-                  {product.description}
+                  {product.description && product.description}
                 </p>
                 <div className="mb-4">
                   <p className="text-sm text-gray-500">
