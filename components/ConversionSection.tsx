@@ -4,28 +4,24 @@ import { useState } from "react";
 import Image from "next/image";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { generateWhatsAppLink } from "@/shared/utils/util";
+import { Avatar, AvatarFallback } from "./ui/avatar";
+import { getInitials } from "@/utils/utils";
 
 const testimonials = [
   {
-    name: "Maria Silva",
-    role: "Proprietária",
-    image: "/placeholder.svg?height=80&width=80",
+    name: "Tamires Vieira",
     content:
-      "A União transformou minha casa em um verdadeiro lar dos sonhos. A qualidade dos produtos e o atendimento excepcional fizeram toda a diferença!",
+      "Comprei telhas infibra da Uniaõ Siqueira e são ótimas, super resistentes e com qualidade",
   },
   {
     name: "João Santos",
-    role: "Arquiteto",
-    image: "/placeholder.svg?height=80&width=80",
     content:
-      "Como profissional, confio na União para todos os meus projetos. A variedade de produtos e a confiabilidade são incomparáveis.",
+      "O atendimento da União é excepcional. Eles realmente entendem as necessidades dos clientes.",
   },
   {
     name: "Ana Oliveira",
-    role: "Designer de Interiores",
-    image: "/placeholder.svg?height=80&width=80",
     content:
-      "Os revestimentos da União são um diferencial em meus projetos. Qualidade e beleza que encantam meus clientes a cada novo trabalho.",
+      "Os revestimentos da União são um diferencial em meus projetos. Qualidade e beleza incomparáveis.",
   },
 ];
 
@@ -78,23 +74,15 @@ export default function ConversionSection() {
                     <p className="text-gray-600 italic mb-4">
                       "{testimonials[activeTestimonial].content}"
                     </p>
-                    <div className="flex items-center">
-                      <Image
-                        src={
-                          testimonials[activeTestimonial].image ||
-                          "/placeholder.svg"
-                        }
-                        alt={testimonials[activeTestimonial].name}
-                        width={50}
-                        height={50}
-                        className="rounded-full mr-4"
-                      />
+                    <div className="flex items-center gap-3">
+                      <Avatar>
+                        <AvatarFallback>
+                          {getInitials(testimonials[activeTestimonial].name)}
+                        </AvatarFallback>
+                      </Avatar>
                       <div>
                         <p className="font-semibold text-[#0648a8]">
                           {testimonials[activeTestimonial].name}
-                        </p>
-                        <p className="text-sm text-gray-500">
-                          {testimonials[activeTestimonial].role}
                         </p>
                       </div>
                     </div>
